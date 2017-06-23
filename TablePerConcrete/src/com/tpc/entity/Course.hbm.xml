@@ -1,0 +1,18 @@
+bbg<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2017 12:36:57 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.tpc.entity.Course" table="COURSE">
+        <id name="Courseid" type="java.lang.String">
+            <column name="COURSEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="Coursename" type="java.lang.String">
+            <column name="COURSENAME" />
+        </property>
+        <property name="duration" type="int">
+            <column name="DURATION" />
+        </property>
+    </class>
+</hibernate-mapping>

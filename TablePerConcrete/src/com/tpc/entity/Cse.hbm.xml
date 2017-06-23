@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2017 12:36:57 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <union-subclass name="com.tpc.entity.Cse" extends="com.tpc.entity.Course" table="CSE" lazy="false">
+        <key>
+            <column name="COURSEID" />
+        </key>
+        <property name="nos" type="int">
+            <column name="NOS" />
+        </property>
+    </union-subclass>
+</hibernate-mapping>

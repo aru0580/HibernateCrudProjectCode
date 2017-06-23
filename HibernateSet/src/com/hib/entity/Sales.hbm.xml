@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 2, 2017 5:15:33 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.hib.entity.Sales" table="SALES">
+        <id name="Orderid" type="java.lang.String">
+            <column name="ORDERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="Orderdate" type="java.util.Date">
+            <column name="ORDERDATE" />
+        </property>
+        <set name="product" table="PRODUCT" inverse="false" lazy="true">
+            <key>
+                <column name="ORDERID" />
+            </key>
+            <one-to-many class="com.hib.entity.Product" />
+        </set>
+    </class>
+</hibernate-mapping>
